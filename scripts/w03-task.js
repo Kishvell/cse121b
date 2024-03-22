@@ -3,6 +3,7 @@
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
 
+
 //Function Declaration
 function greet(name) {
     return `Hello, ${name}!`;
@@ -44,14 +45,3 @@ function greet(name) {
     let multipliedNumbers = numbersArray.map(num => num * 2);
     /* Output Sum of Multiplied by 2 Array */
     let sumOfMultiplied = numbersArray.map(num => num * 2).reduce((sum, num) => sum + num, 0);
-  
-  // Example usage of the functions and array methods
-  console.log(greet('Alice'));
-  console.log(multiply(5, 3));
-  console.log(power(2, 3));
-  console.log(checkNumber(7));
-  console.log(oddNumbers);
-  console.log(evenNumbers);
-  console.log(sumOfArray);
-  console.log(multipliedNumbers);
-  console.log(sumOfMultiplied);
