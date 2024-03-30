@@ -3,45 +3,56 @@
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
 
+// Function Declaration for Addition
+function add(num1, num2) {
+  return num1 + num2;
+}
 
-//Function Declaration
-function greet(name) {
-    return `Hello, ${name}!`;
+// Function Expression for Subtraction
+const subtract = function(num1, num2) {
+  return num1 - num2;
+};
+
+// Arrow Function for Multiplication
+const multiply = (num1, num2) => num1 * num2;
+
+// Function Declaration for Division
+function divide(num1, num2) {
+  if (num2 !== 0) {
+      return num1 / num2;
+  } else {
+      return "Cannot divide by zero";
   }
+}
 
-    /* Function Expression - Subtract Numbers */
-  // Function Expression
-  let multiply = function(x, y) {
-    return x * y;
-  };
+// Event Listener for Button Click
+document.addEventListener('DOMContentLoaded', function() {
+  const calculateButton = document.getElementById('calculate');
+  if (calculateButton) {
+      calculateButton.addEventListener('click', function() {
+          let num1 = parseFloat(document.getElementById('num1').value);
+          let num2 = parseFloat(document.getElementById('num2').value);
+          let operation = document.getElementById('operation').value;
+          let result;
 
-    /* Arrow Function - Multiply Numbers */
-  // Arrow Function
-  let power = (base, exponent) => {
-    return Math.pow(base, exponent);
-  };
+          switch (operation) {
+              case 'add':
+                  result = add(num1, num2);
+                  break;
+              case 'subtract':
+                  result = subtract(num1, num2);
+                  break;
+              case 'multiply':
+                  result = multiply(num1, num2);
+                  break;
+              case 'divide':
+                  result = divide(num1, num2);
+                  break;
+              default:
+                  result = "Invalid operation";
+          }
 
-    /* Open Function Use - Divide Numbers */
-  // Your Choice (IIFE - Immediately Invoked Function Expression)
-  (function() {
-    console.log('This is an IIFE');
-  })();
-
-    /* Decision Structure */
-  // Selection Structure (Ternary Operator)
-  let checkNumber = num => (num % 2 === 0) ? 'Even' : 'Odd';
-
-    /* ARRAY METHODS - Functional Programming */
-    /* Output Source Array */
-  // Array Methods - Functional Programming
-  let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    /* Output Odds Only Array */
-    let oddNumbers = numbersArray.filter(num => num % 2 !== 0);
-    /* Output Evens Only Array */
-    let evenNumbers = numbersArray.filter(num => num % 2 === 0);
-    /* Output Sum of Org. Array */
-    let sumOfArray = numbersArray.reduce((sum, num) => sum + num, 0);
-    /* Output Multiplied by 2 Array */
-    let multipliedNumbers = numbersArray.map(num => num * 2);
-    /* Output Sum of Multiplied by 2 Array */
-    let sumOfMultiplied = numbersArray.map(num => num * 2).reduce((sum, num) => sum + num, 0);
+          document.getElementById('result').textContent = result;
+      });
+  }
+});
