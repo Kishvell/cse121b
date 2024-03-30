@@ -12,8 +12,8 @@ const profilePicture = "images/Yo.jpg";
 
 const nameElement = document.getElementById("Santiago");
 const foodElement = document.getElementById("Milanesa");
-const yearElement = document.querySelector("2003");
-const imageElement = document.querySelector("images/Yo.jpg");
+const yearElement = document.querySelector("[id='2003']")
+const imageElement = document.querySelector("#profile-image");
 
 /* Step 4 - Adding Content */
 
