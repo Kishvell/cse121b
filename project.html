@@ -1,49 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
+<html id="Weather-app" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>CSE 121b | W05: Programming Tasks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body>
+<body>
     <nav>
         <ul id="menu">
-          <li><a id="toggleMenu">&equiv;</a></li>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="w01-task.html">W1 Task</a></li>
-          <li><a href="w03-task.html">W3 Task</a></li>
-          <li><a href="w04-task.html">W4 Task</a></li>
-          <li><a href="w05-task.html">W5 Task</a></li>
-          <li><a href="project.html">Project</a></li>
+        <li><a id="toggleMenu">&equiv;</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="w01-task.html">W1 Task</a></li>
+        <li><a href="w03-task.html">W3 Task</a></li>
+        <li><a href="w04-task.html">W4 Task</a></li>
+        <li><a href="w05-task.html" class="active">W5 Task</a></li>
+        <li><a href="project.html">Project</a></li>
         </ul>
-      </nav>
+    </nav>
+    <div id="weather-container">
+        <h2>Weather App</h2>
+        <input type="text" id="city" placeholder="Enter city">
+        <button onclick="getWeather()">Search</button>
 
-    <div class="weather-app">
-        <input type="text" id="city-input" placeholder="Enter city">
-        <button id="search-btn">Search</button>
-        <div>
-            <h2 id="city-display"></h2>
-            <p>Temperature: <span id="temperature-display"></span></p>
-            <p>Humidity: <span id="humidity-display"></span></p>
-            <p>Wind Speed: <span id="wind-speed-display"></span></p>
-            <p>Weather Condition: <span id="weather-condition-display"></span></p>
-        </div>
+        <img src="images/Icon.jpg" id="weather-icon" alt="Weather Icon">
+
+        <div id="temp-div"></div>
+
+        <div id="weather-info"></div>
+
+        <div id="hourly-forecast"></div>
     </div>
     <footer>
-        &copy;<span id="year"></span> | Project | CSE 121b | W06 Final Project Application
+        &copy;<span id="year"></span> | Project 06 - Weather App | CSE 121b
     </footer>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/project-task.js"></script>
-    </body>
+    <script src="/scripts/project.js"></script>
+</body>
 </html>
